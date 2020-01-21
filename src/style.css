@@ -1,0 +1,42 @@
+h1,
+p {
+  font-family: Open Sans;
+  font-size: 500%;
+}
+
+h2 {
+  font-family: Open Sans;
+  font-size: 300%;
+  font-weight: lighter;
+}
+
+.main {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.upper-text {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  bottom: 40%;
+  left: 6%;
+  height: 100px;
+}
+
+.lower-text {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  bottom: 15%;
+  left: 6%;
+  height: 100px;
+}
+
+.logo {
+  width: 20%;
+  position: absolute;
+  margin: auto;
+  top: 2%;
+  left: 2%;
+}
