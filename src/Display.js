@@ -3,6 +3,8 @@ import ParticlesBg from "particles-bg";
 import axios from "axios";
 import { getConfig } from "./util/animationConfig";
 import { parseData } from "./util/parseData";
+import lazy from './img/lazy.gif';
+import gym from './img/gym.gif';
 
 export default class Display extends Component {
   constructor() {
@@ -10,7 +12,8 @@ export default class Display extends Component {
     this.state = {
       name: "React",
       gymData: "",
-      parsedData: ""
+      parsedData: "",
+      img: ""
     };
   }
 
@@ -31,10 +34,19 @@ export default class Display extends Component {
       .then(response => {
         this.setState({ gymData: response.data.Items[0] });
         this.setState({ parsedData: parseData(this.state.gymData) });
+        this.setImg();
       })
       .catch(function(error) {
         console.log(error);
       });
+  }
+
+  setImg() {
+    if (this.state.parsedData.today === true) {
+      this.setState({img : gym});
+    } else {
+      this.setState({img : lazy});
+    }
   }
 
   render() {
@@ -42,6 +54,7 @@ export default class Display extends Component {
       <div>
         <ParticlesBg type='custom' config={getConfig()} bg={true} />
         <div className='content'>
+          <img className='display-img' src={this.state.img} alt="gif"/>
           <div className='upper-text'>
             <h1 className='main-title'>{this.state.parsedData.header}</h1>
           </div>
