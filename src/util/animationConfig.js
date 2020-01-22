@@ -1,3 +1,4 @@
+import icon from "../img/weight"
 
 export function getConfig() {
   //Default config
@@ -14,6 +15,7 @@ export function getConfig() {
     color: ["random", "#ff0000"],
     cross: "dead",
     // emitter: "follow",
+    body: icon,
     random: 2
   };
 

@@ -3,6 +3,7 @@ import ParticlesBg from "particles-bg";
 import axios from "axios";
 import { getConfig } from "./util/animationConfig";
 import { parseData } from "./util/parseData";
+import Img from 'react-image';
 import lazy from './img/lazy.gif';
 import gym from './img/gym.gif';
 
@@ -54,7 +55,10 @@ export default class Display extends Component {
       <div>
         <ParticlesBg type='custom' config={getConfig()} bg={true} />
         <div className='content'>
-          <img className='display-img' src={this.state.img} alt="gif"/>
+        <div className='leading-text'>
+            <h3 className='main-title'>Was Nathan at the gym today???</h3>
+          </div>
+          <Img className='display-img' src={this.state.img} alt="gif"/>
           <div className='upper-text'>
             <h1 className='main-title'>{this.state.parsedData.header}</h1>
           </div>

@@ -1,15 +1,16 @@
 export function parseData(gymData) {
+
   let webData = {};
 
-  const parsedDate = gymData["date-and-arrival"].substring(
+  const parsedDate = gymData.date.substring(
     2,
-    gymData["date-and-arrival"].length - 2
+    gymData.date.length - 2
   );
-  const parsedArrivalTime = gymData.title.substring(
+  const parsedArrivalTime = gymData.arrival.substring(
     2,
-    gymData.title.length - 2
+    gymData.arrival.length - 2
   );
-  const parsedDuration = gymData.info.substring(2, gymData.info.length - 2);
+  const parsedDuration = gymData.duration.substring(2, gymData.duration.length - 2);
 
   //Get current date
   var today = new Date();
@@ -27,9 +28,6 @@ export function parseData(gymData) {
     webData.header = "Nathan was not at the gym today :("
     webData.footer = `There's still time yet! He was last at the gym on ${parsedDate}.`
   }
-
-  console.log(webData.today)
-  console.log(webData.header)
 
   return webData;
 }

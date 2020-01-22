@@ -1,12 +1,17 @@
 h1,
 p {
-  font-family: Open Sans;
+  text-align: center;
   font-size: 500%;
 }
 
 h2 {
-  font-family: Open Sans;
+  text-align: center;
   font-size: 300%;
+  font-weight: lighter;
+}
+
+h3 {
+  text-align: center;
   font-weight: lighter;
 }
 
@@ -15,12 +20,21 @@ h2 {
   border-radius: 10px;
 }
 
+.leading-text {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 3%;
+  left: 0;
+  height: 100px;
+}
+
 .upper-text {
   position: absolute;
   margin: auto;
   right: 0;
   bottom: 40%;
-  left: 6%;
+  left: 0;
   height: 100px;
 }
 
@@ -29,7 +43,7 @@ h2 {
   margin: auto;
   right: 0;
   bottom: 15%;
-  left: 6%;
+  left: 0;
   height: 100px;
 }
 
@@ -48,5 +62,5 @@ h2 {
   right: 0;
   bottom: 40%;
   left: 0;
-  height: 300px;
+  height: 30%;
 }
