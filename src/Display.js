@@ -65,6 +65,9 @@ export default class Display extends Component {
           <div className='lower-div'>
             <h2 className='lower-text'>{this.state.parsedData.footer}</h2>
           </div>
+          <div className='github'>
+            <a href='https://github.com/NathanScott101/gym-website'>github</a>
+          </div>
         </div>
       </div>
     );
