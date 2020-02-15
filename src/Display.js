@@ -59,10 +59,10 @@ export default class Display extends Component {
             <h3 className='main-title'>Was Nathan at the gym today???</h3>
           </div>
           <Img className='display-img' src={this.state.img} alt="gif"/>
-          <div className='upper-text'>
-            <h1 className='main-title'>{this.state.parsedData.header}</h1>
+          <div>
+            <h1 className='upper-text'>{this.state.parsedData.header}</h1>
           </div>
-          <div className='lower-div'>
+          <div>
             <h2 className='lower-text'>{this.state.parsedData.footer}</h2>
           </div>
           <div className='github'>
