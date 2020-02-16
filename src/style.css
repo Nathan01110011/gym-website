@@ -55,10 +55,9 @@ h3 {
   position: absolute;
   margin: auto;
   right: 0;
-  bottom: 0;
-  top: 95%;
+  bottom: 2%;
   left: 0;
-  height: 100px;
+  height: 2vmin;
   text-align: center;
 }
 
