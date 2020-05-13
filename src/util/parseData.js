@@ -21,12 +21,16 @@ export function parseData(gymData) {
 
   if (today === parsedDate) {
     webData.today = true;
-    webData.header = "Nathan was at the gym today!"
-    webData.footer = `He arrived at ${parsedArrivalTime} and was there for ${parsedDuration}.`
+    webData.header = "Nathan was at the gym today!";
+    webData.footer = `He arrived at ${parsedArrivalTime} and was there for ${parsedDuration}.`;
+  } else if (gymData.arrival === "[]") {
+    webData.today = false;
+    webData.header = "Nathan has not been to the gym in over 30 days!";
+    webData.footer = `He's probably dead.`;
   } else {
     webData.today = false;
-    webData.header = "Nathan was not at the gym today :("
-    webData.footer = `There's still time yet! He was last at the gym on ${parsedDate}.`
+    webData.header = "Nathan was not at the gym today :(";
+    webData.footer = `There's still time yet! He was last at the gym on ${parsedDate}.`;
   }
 
   return webData;
